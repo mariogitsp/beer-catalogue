@@ -1,0 +1,29 @@
+.beer-detail-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #3a3f47; /* Slightly lighter dark charcoal */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.beer-detail-container h2 {
+    color: #ffbf00; /* Amber-like color */
+    margin-bottom: 15px;
+}
+
+.beer-detail-container p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.beer-detail-container strong {
+    color: #ffd700; /* Gold color for labels */
+}
+
+.no-beer {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #ff6347; /* Tomato red */
+}

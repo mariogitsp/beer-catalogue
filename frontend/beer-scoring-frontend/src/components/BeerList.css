@@ -1,0 +1,35 @@
+.beer-list-container {
+    padding: 20px;
+}
+
+.beer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.beer-list-item {
+    background-color: #3a3f47; /* Slightly lighter dark charcoal */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.beer-list-item a {
+    color: #ffbf00; /* Amber-like color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.beer-list-item a:hover {
+    text-decoration: underline;
+}
+
+.loading, .error {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.error {
+    color: #ff6347; /* Tomato red for errors */
+}
