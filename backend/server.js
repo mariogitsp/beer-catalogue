@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+const mongoose = require('mongoose');
 
 const app = express();
 const port = 5000;
@@ -11,6 +12,15 @@ app.use(express.json());
 
 const CATALOG_BEER_API_KEY = process.env.CATALOG_BEER_API_KEY;
 const CATALOG_BEER_API_ROOT = 'https://api.catalog.beer';
+const MONGODB_URI = process.env.MONGODB_URI;
+
+// Connect to MongoDB Atlas
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('Connected to MongoDB Atlas'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 
 // Middleware to check for API key
 app.use((req, res, next) => {
