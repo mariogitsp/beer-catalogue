@@ -1,0 +1,254 @@
+.nearby-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.nearby-header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #3d3d3d;
+}
+
+.nearby-header h1 {
+  color: #ffb84d;
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.user-coords {
+  color: #aaa;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.nearby-card {
+  background: #2a2a2a;
+  border: 1px solid #3d3d3d;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.nearby-card.error-state,
+.nearby-card.loading-state,
+.nearby-card.empty-state {
+  text-align: center;
+  padding: 60px 25px;
+}
+
+.nearby-card h2 {
+  color: #ffb84d;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.nearby-card p {
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.btn-retry {
+  background: #ffb84d;
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-retry:hover {
+  background: #ffa500;
+  transform: translateY(-2px);
+}
+
+.locations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location-card {
+  background: #2a2a2a;
+  border: 1px solid #3d3d3d;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.location-card:hover {
+  border-color: #ffb84d;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 184, 77, 0.15);
+}
+
+.location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.location-header h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.location-type {
+  background: #3d3d3d;
+  color: #ffb84d;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.location-distance {
+  margin-bottom: 15px;
+}
+
+.distance-badge {
+  background: #ffb84d;
+  color: #1a1a1a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.location-address {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.location-address span {
+  background: #3d3d3d;
+  color: #aaa;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.location-description {
+  color: #aaa;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.location-beers {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #3d3d3d;
+}
+
+.location-beers h3 {
+  color: #ffb84d;
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+}
+
+.beer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.beer-item:last-child {
+  margin-bottom: 0;
+}
+
+.beer-name {
+  color: #fff;
+  font-weight: 600;
+}
+
+.beer-brewery {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.available-badge {
+  background: #4ade80;
+  color: #1a1a1a;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.beer-item.empty {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+}
+
+.location-phone {
+  color: #aaa;
+  margin: 15px 0 0 0;
+  font-size: 0.9rem;
+}
+
+.location-website {
+  display: inline-block;
+  color: #ffb84d;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.location-website:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nearby-container {
+    padding: 15px;
+  }
+  
+  .nearby-header {
+    padding: 20px;
+  }
+  
+  .nearby-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .location-card {
+    padding: 20px;
+  }
+  
+  .location-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
