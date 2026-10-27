@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 const mongoose = require('mongoose');
+const locationRoutes = require('./routes/locations');
 
 const app = express();
 const port = 5000;
@@ -21,6 +22,9 @@ mongoose.connect(MONGODB_URI, {
 })
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch((err) => console.error('MongoDB connection error:', err));
+
+// Routes
+app.use('/api/locations', locationRoutes);
 
 // Middleware to check for API key
 app.use((req, res, next) => {
