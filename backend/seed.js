@@ -8,7 +8,6 @@ const seedLocations = async () => {
       useUnifiedTopology: true,
     });
 
-    // Clear existing locations
     await Location.deleteMany({});
 
     const croatianLocations = [
@@ -24,7 +23,7 @@ const seedLocations = async () => {
         coordinates: { type: 'Point', coordinates: [15.5556, 45.4942] },
         phone: '+385 47 601 111',
         website: 'https://www.karlovacko.hr',
-        description: 'Home of Karlovačko beer - Croatia\\'s most popular lager',
+        description: "Home of Karlovačko beer - Croatia's most popular lager",
         common_beers: [
           { beer_name: 'Karlovačko Lager', brewery_name: 'Karlovačka Pivovara', is_available: true },
           { beer_name: 'Karlovačko Radler', brewery_name: 'Karlovačka Pivovara', is_available: true },
@@ -42,7 +41,7 @@ const seedLocations = async () => {
         coordinates: { type: 'Point', coordinates: [15.9889, 45.8011] },
         phone: '+385 1 6333 333',
         website: 'https://www.ozujsko.hr',
-        description: 'Home of Ožujsko beer - Zagreb\\'s iconic brewery',
+        description: "Home of Ožujsko beer - Zagreb's iconic brewery",
         common_beers: [
           { beer_name: 'Ožujsko Lager', brewery_name: 'Zagrebačka Pivovara', is_available: true },
           { beer_name: 'Ožujsko Cool', brewery_name: 'Zagrebačka Pivovara', is_available: true },
@@ -60,7 +59,7 @@ const seedLocations = async () => {
         coordinates: { type: 'Point', coordinates: [18.6939, 45.5543] },
         phone: '+385 31 543 111',
         website: 'https://www.osjecko.hr',
-        description: 'Croatia\\'s oldest brewery, founded 1697',
+        description: "Croatia's oldest brewery, founded 1697",
         common_beers: [
           { beer_name: 'Osječko Lager', brewery_name: 'Osječka Pivovara', is_available: true },
           { beer_name: 'Osječko Dark', brewery_name: 'Osječka Pivovara', is_available: true },
